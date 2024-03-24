@@ -19,6 +19,9 @@ def get_provider(llm_provider):
         case "google":
             from ..llm_provider import GoogleProvider
             llm_provider = GoogleProvider
+        case "azureopenai":
+            from ..llm_provider import AzureOpenAIProvider
+            llm_provider = AzureOpenAIProvider
 
         case _:
             raise Exception("LLM provider not found.")

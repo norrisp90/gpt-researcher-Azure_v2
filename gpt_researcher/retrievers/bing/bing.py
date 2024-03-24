@@ -16,7 +16,7 @@ class BingSearch():
         Args:
             query:
         """
-        self.query = query
+        self.query = os.environ["SEARCH_DOMAIN"] + " " + query
         self.api_key = self.get_api_key()
 
     def get_api_key(self):
